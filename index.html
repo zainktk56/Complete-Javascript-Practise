@@ -5,417 +5,401 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Exercise</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+    <!-- External Fonts (Currently disabled) -->
+    <!-- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    -->
 </head>
+
 <style>
-    /* #btn{
+    /* ==========================================================================
+       Unused/Legacy Styles (Disabled)
+       ========================================================================== */
+    /* 
+    #btn {
         padding: 5px;
         border: none;
         background-color: yellowgreen;
         border-radius: 10px;
-    } */
-    /* #new_colur{
+    }
+    #new_colur, #end_colur {
         padding: 10px;
-        font-size:small;
+        font-size: small;
         border-radius: 10px;
         border: 1px groove black;
-     }
-     #end_colur{
-          padding: 10px;
-        font-size:small;
-        border-radius: 10px;
-        border: 1px groove black;
-     } */
-    /* #output {
+    }
+    #output {
         margin: auto;
         background-color: aqua;
     }
-
     #usr_inp {
         margin-left: 500px;
         padding: 5px 45px;
     }
-
     #inpbtn {
         margin-left: 500px;
         padding: 5px 45px;
         background-color: chartreuse;
         border: none;
-    } */
-     
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-}
+    } 
+    */
 
-body {
-  background-color: #f8fafc;
-  color: #0f172a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 40px 20px;
-}
+    /* ==========================================================================
+       Global & App Layout Styles
+       ========================================================================== */
+    /* * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
 
-.app-layout {
-  width: 100%;
-  max-width: 860px;
-}
+    body {
+        background-color: #f8fafc;
+        color: #0f172a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
 
-/* Header */
-/* .app-header { */
-  /* margin-bottom: 28px;
-  text-align: center;
-}
+    .app-layout {
+        width: 100%;
+        max-width: 860px;
+    }
 
-.app-header h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #0f172a;
-  letter-spacing: -0.03em;
-}
+    
+    .app-header {
+        margin-bottom: 28px;
+        text-align: center;
+    }
 
-.app-header p {
-  font-size: 0.875rem;
-  color: #64748b;
-  margin-top: 4px;
-}
+    .app-header h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.03em;
+    }
 
-/* Main Layout Grid (Form centers automatically until output has content) */
-/* .container {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  align-items: start;
-  width: 100%;
-  transition: all 0.3s ease;
-}
+    .app-header p {
+        font-size: 0.875rem;
+        color: #64748b;
+        margin-top: 4px;
+    }
 
+   
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        align-items: start;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
 
-.container:has(#output:not(:empty)) {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-}
+    .container:has(#output:not(:empty)) {
+        display: grid;
+        grid-template-columns: 380px 1fr;
+    }
 
-#inputs {
-  background: #ffffff;
-  padding: 28px;
-  border-radius: 16px;
-  border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-  width: 100%;
-  max-width: 420px;
-}
+   
+    #inputs {
+        background: #ffffff;
+        padding: 28px;
+        border-radius: 16px;
+        border: 1px solid #e2e8f0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+        width: 100%;
+        max-width: 420px;
+    }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
 
-.input-group label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #64748b;
-}
+    .input-group label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #64748b;
+    }
 
-input {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 10px;
-  border: 1px solid #cbd5e1;
-  font-size: 0.925rem;
-  color: #0f172a;
-  background-color: #ffffff;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
+    input {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 10px;
+        border: 1px solid #cbd5e1;
+        font-size: 0.925rem;
+        color: #0f172a;
+        background-color: #ffffff;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
 
-input:focus {
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
-}
+    input:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+    }
 
-input[readonly] {
-  background-color: #f1f5f9;
-  color: #64748b;
-  border-color: #e2e8f0;
-  cursor: not-allowed;
-}
+    input[readonly] {
+        background-color: #f1f5f9;
+        color: #64748b;
+        border-color: #e2e8f0;
+        cursor: not-allowed;
+    }
 
+   
+    #submit {
+        width: 100%;
+        padding: 14px;
+        border-radius: 10px;
+        border: none;
+        color: #ffffff;
+        background-color: #4f46e5;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    }
 
-#submit {
-  width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  border: none;
-  color: #ffffff;
-  background-color: #4f46e5;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-top: 8px;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-}
+    #submit:hover {
+        background-color: #4338ca;
+        box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+        transform: translateY(-1px);
+    }
 
-#submit:hover {
-  background-color: #4338ca;
-  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
-  transform: translateY(-1px);
-}
+    #submit:active {
+        transform: translateY(0);
+    }
 
-#submit:active {
-  transform: translateY(0);
-}
+    
+    #output {
+        width: 100%;
+    }
 
+    #Bill {
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 16px;
+        padding: 28px !important;
+        margin-top: 0 !important;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+        position: relative;
+        overflow: hidden;
+    }
 
-#output {
-  width: 100%;
-}
+    #Bill::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #4f46e5, #06b6d4);
+    }
 
+    #Bill h1 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 20px;
+        color: #0f172a;
+        border-bottom: 1px solid #f1f5f9;
+        padding-bottom: 12px;
+        letter-spacing: -0.02em;
+    }
 
-#Bill {
-  background: #ffffff !important;
-  border: 1px solid #e2e8f0 !important;
-  border-radius: 16px;
-  padding: 28px !important;
-  margin-top: 0 !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
-  position: relative;
-  overflow: hidden;
-}
+    #Bill p {
+        font-size: 0.875rem;
+        line-height: 2;
+        color: #475569;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-#Bill::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #4f46e5, #06b6d4);
-}
+    #Bill p b {
+        color: #0f172a;
+        font-weight: 600;
+    }
 
-#Bill h1 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-align: left;
-  margin-bottom: 20px;
-  color: #0f172a;
-  border-bottom: 1px solid #f1f5f9;
-  padding-bottom: 12px;
-  letter-spacing: -0.02em;
-}
+   
+    #Bill p:nth-of-type(5) {
+        margin-top: 16px;
+        padding: 14px 16px;
+        background: #f0fdf4;
+        border-radius: 10px;
+        border: 1px solid #bbf7d0;
+        color: #166534;
+        font-weight: 600;
+    }
 
-#Bill p {
-  font-size: 0.875rem;
-  line-height: 2;
-  color: #475569;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    #Bill p:nth-of-type(5) b {
+        color: #15803d;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
 
-#Bill p b {
-  color: #0f172a;
-  font-weight: 600;
-}
+   
+    #Bill p:nth-of-type(6) {
+        padding: 4px 16px;
+        color: #94a3b8;
+        font-size: 0.8rem;
+    }
 
+    
+    #Bill p:nth-of-type(7) {
+        padding: 12px 16px;
+        background: #fef2f2;
+        border-radius: 10px;
+        border: 1px solid #fecaca;
+        color: #991b1b;
+        font-weight: 600;
+    }
 
-#Bill p:nth-of-type(5) {
-  margin-top: 16px;
-  padding: 14px 16px;
-  background: #f0fdf4;
-  border-radius: 10px;
-  border: 1px solid #bbf7d0;
-  color: #166534;
-  font-weight: 600;
-}
+    #Bill p:nth-of-type(7) b {
+        color: #dc2626;
+        font-size: 1rem;
+        font-weight: 700;
+    }
 
-#Bill p:nth-of-type(5) b {
-  color: #15803d;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
+    #Bill h3 {
+        font-size: 0.825rem;
+        font-weight: 600;
+        color: #475569;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        padding: 10px 14px;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-align: center;
+        letter-spacing: 0.025em;
+    }
 
-
-#Bill p:nth-of-type(6) {
-  padding: 4px 16px;
-  color: #94a3b8;
-  font-size: 0.8rem;
-}
-
-
-#Bill p:nth-of-type(7) {
-  padding: 12px 16px;
-  background: #fef2f2;
-  border-radius: 10px;
-  border: 1px solid #fecaca;
-  color: #991b1b;
-  font-weight: 600;
-}
-
-#Bill p:nth-of-type(7) b {
-  color: #dc2626;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-
-#Bill h3 {
-  font-size: 0.825rem;
-  font-weight: 600;
-  color: #475569;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  padding: 10px 14px;
-  border-radius: 8px;
-  margin-top: 20px;
-  text-align: center;
-  letter-spacing: 0.025em;
-}
-
-
-@media (max-width: 800px) {
-  .container,
-  .container:has(#output:not(:empty)) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-} 
+   
+    @media (max-width: 800px) {
+        .container,
+        .container:has(#output:not(:empty)) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }  */
 </style>
 
 <body>
 
-    <!-- <div id="qualifications">
-        
-    </div> -->
+    <!-- ==========================================================================
+       Unused/Previous Exercise Code (Commented Out)
+       ========================================================================== -->
     <!-- 
+    <div id="qualifications"></div>
+
     <div>
-        <input type="text" name="" id="arr_input" placeholder="Enter your Name ">
+        <input type="text" id="arr_input" placeholder="Enter your Name ">
         <br><br>
-        <input type="number" name="" id="arr_num_input" placeholder="Enter your marks ">
+        <input type="number" id="arr_num_input" placeholder="Enter your marks ">
         <br><br>
         <button id="btn">Add Name</button>
-
-        <div id="output"> 
-
-        </div>
-    </div> -->
-
-
-    <!-- <input type="text" name="" id="end_colur" placeholder="Enter a colour at the end "> -->
-    <!-- <input type="text" name="" id="new_colur" placeholder="Enter a new colour ">
-    <br><br>  -->
-    <!-- <input type="number" name="" id="customIndex" placeholder="Enter Index(1-10)">
-            <br><br>
-            <button id="add">Delete</button>
-        <div id="output"> 
-        
-        </div> 
-
-    <!- <div id="sort_stu">
-        Cities List :
+        <div id="output"></div>
     </div>
-    <p id="select">Selected Cities:</p> -->
 
+    <input type="text" id="end_colur" placeholder="Enter a colour at the end ">
+    <input type="text" id="new_colur" placeholder="Enter a new colour ">
+    <br><br> 
+    <input type="number" id="customIndex" placeholder="Enter Index(1-10)">
+    <br><br>
+    <button id="add">Delete</button>
+    <div id="output"></div> 
 
-    <!-- <p id="output"> 
-       <b>Counting:</b> 
-    </p> 
-    <p id="reverse"> 
-       <b>Counting Reverse:</b> 
-    </p> 
-    <p id="even">
-        <b>Even:</b>
-    </p>
-    <p id="odd">
-        <b>Odd:</b>
-    </p>
-    <p id="series">
-        <b>Serries:</b>
-    </p> -->
+    <div id="sort_stu">Cities List :</div>
+    <p id="select">Selected Cities:</p>
 
-    <!-- <h1 style="text-align: center;">Welcome to our Store!</h1> -->
-    <!-- <h1 style="text-align: center;">Enter Passowrd!</h1>
+    <p id="output"><b>Counting:</b></p> 
+    <p id="reverse"><b>Counting Reverse:</b></p> 
+    <p id="even"><b>Even:</b></p>
+    <p id="odd"><b>Odd:</b></p>
+    <p id="series"><b>Series:</b></p>
+
+    <h1 style="text-align: center;">Welcome to our Store!</h1>
+    <h1 style="text-align: center;">Enter Password!</h1>
     <div id="output">
-
         <br><br>
-        <input type="text" name="" id="usr_inp" placeholder="Enter Password ">
+        <input type="text" id="usr_inp" placeholder="Enter Password ">
         <br><br>
         <button id="inpbtn">Enter</button>
-        
-           <p style="text-align: center;">a. It should contain alphabets and numbers</p><br>
-            <p style="text-align: center;">b. It should not start with a number</p><br>
-            <p style="text-align: center;" >c. It must at least 6 characters long</p>
-        
-    </div> -->
-    <!-- <div>
-        <button type="button " id="roll">TOSS </button>
+        <p style="text-align: center;">a. It should contain alphabets and numbers</p><br>
+        <p style="text-align: center;">b. It should not start with a number</p><br>
+        <p style="text-align: center;">c. It must at least 6 characters long</p>
+    </div>
+
+    <div>
+        <button type="button" id="roll">TOSS</button>
         <div id="output">
             <p id="x"></p><br>
             <p id="y"></p><br>
             <p id="z"></p>
         </div>
-        <div id="output">
+    </div>
+    -->
 
+    <!-- ==========================================================================
+       Active Application: Electricity Bill Generator
+       ========================================================================== -->
+    <!-- <div class="app-layout">
+        
+       
+        <header class="app-header">
+            <h1>Electricity Bill Generator</h1>
+            <p>Calculate and review consumer utility charges</p>
+        </header>
+
+        
+        <div class="container">
+            
+            <form action="" id="inputs">
+                <div class="input-group">
+                    <label for="usr_name">Customer Name</label>
+                    <input type="text" name="Name" id="usr_name" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="units">Units Consumed</label>
+                    <input type="number" name="units" id="units" placeholder="e.g. 250">
+                </div>
+
+                <div class="input-group">
+                    <label for="month">Billing Month</label>
+                    <input readonly type="text" id="month" value="">
+                </div>
+
+                <div class="input-group">
+                    <label for="price">Unit Rate (PKR)</label>
+                    <input readonly type="text" name="price" id="price" value="">
+                </div>
+
+                <button id="submit">Generate Invoice</button>
+            </form>
+
+            
+            <div id="output"></div>
         </div>
     </div> -->
-    <!-- <button id="roll">Generate</button>
-    <div id="output">
 
-    </div> -->
-<div class="app-layout">
-  <header class="app-header">
-    <h1>Electricity Bill Generator</h1>
-    <p>Calculate and review consumer utility charges</p>
-  </header>
-
-  <div class="container">
-    <form action="" id="inputs">
-      <div class="input-group">
-        <label for="usr_name">Customer Name</label>
-        <input type="text" name="Name" id="usr_name" placeholder="e.g. John Doe" required>
-      </div>
-
-      <div class="input-group">
-        <label for="units">Units Consumed</label>
-        <input type="number" name="units" id="units" placeholder="e.g. 250">
-      </div>
-
-      <div class="input-group">
-        <label for="month">Billing Month</label>
-        <input readonly type="text" id="month" value="">
-      </div>
-
-      <div class="input-group">
-        <label for="price">Unit Rate (PKR)</label>
-        <input readonly type="text" name="price" id="price" value="">
-      </div>
-
-      <button id="submit">Generate Invoice</button>
-    </form>
-
-    <div id="output"></div>
-  </div>
-</div>
-
-
+    
     <script src="app.js"></script>
 </body>
 
