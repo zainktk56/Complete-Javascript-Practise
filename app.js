@@ -1664,6 +1664,249 @@
 //         alert("Please enter a valid number.");
 //     }
 //     }
-    
+
 // }
+
+
+// CHAPTER 31-34
+
+// 1. Write a program that displays current date and time in
+// your browser.
+
+// const date=new Date();
+// console.log(date)
+
+// 2. Write a program that alerts the current month in words.
+// For example December.
+
+// const months = [
+//   "January", "February", "March", "April", "May", "June",
+//   "July", "August", "September", "October", "November", "December"
+// ];
+
+// const date=new Date()
+// const getMonth= date.getMonth()
+
+// const currentMonth=months[getMonth]
+// console.log(currentMonth)
+
+// 3. Write a program that alerts the first 3 letters of the current
+// day, for example if today is Sunday then alert will show
+// Sun.
+
+// let weekDays=['Sun','Mon','Tue','Wed','Thr','Fri','Sat']
+
+//  const date=new Date()
+// const Day=date.getDay()
+// alert(`Today is ${weekDays[Day]}`)
+
+// // 4. Write a program that displays a message “It’s Fun day” if
+// // its Saturday or Sunday today.
+
+// let weekDays=['Sun','Mon','Tue','Wed','Thr','Fri','Sat'];
+// const date=new Date()
+// const Day=date.getDay()
+
+// if (Day==0 || Day==6){
+//     alert(`IT'S FUN DAY`)
+// }
+// else{
+//     alert(`Today is ${weekDays[Day]}`)
+// }
+
+// 5. Write a program that shows the message “First fifteen
+// days of the month” if the date is less than 16th of the month
+// else shows “Last days of the month”.
+
+//  const date=new Date()
+//  const MonthDay=date.getDate()
+
+// if (MonthDay>16){
+//     alert("It's Last Fifteen Days of the month.")
+// }
+// else{
+//     alert("It's First Fifteen Days of the month.")
+// }
+
+// 6. Write a program that determines the minutes since
+// midnight, Jan. 1, 1970 and assigns it to a variable that
+// hasn't been declared beforehand. Use any variable you like
+// to represent the Date object.
+
+// const currentDateTime = new Date();
+// millisecondSinceEpoch=currentDateTime.getTime()
+// minutesSinceEpoch = Math.floor(currentDateTime.getTime() / (1000 * 60));
+
+// // .getTime() gets the total milliseconds since midnight, Jan 1, 1970.
+// // Dividing by 1000 converts milliseconds to seconds.
+// // Dividing by 60 converts seconds to minutes.
+
+// console.log(`Current Time : ${currentDateTime}`)
+// console.log(`MilliSecond Since Epoch : ${millisecondSinceEpoch}`)
+// console.log(`MInutes Since Epoch : ${minutesSinceEpoch}`)
+
+// 7. Write a program that tests whether it's before noon and
+// alert “Its AM” else “its PM”
+
+// const currentDateTime = new Date();
+// const time=currentDateTime.getHours();
+
+// if (time < 12) {
+//     alert("Its AM");
+// } else {
+//     alert("its PM");
+// }
+
+// 8. Write a program that creates a Date object for the last day
+// of the last month of 2020 and assigns it to variable named
+// laterDate.
+
+// Date(year, month, day, hour, minute, second, ms)
+
+// const date= new Date(2020,12,0,0,0,0);
+// console.log(date)
+
+// 9. Create a date object of the starting date of this Ramadan
+// and alert the number of days past since 1st Ramadan?
+// Note: 1st Ramadan was on June 18, 2015
+
+// const currentDate = new Date();
+
+// const ramadanDate = new Date(2009,4,1); 
+
+// const difference = currentDate.getTime() - ramadanDate.getTime();
+
+// const dayspassed = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+// console.log(currentDate);
+// console.log(ramadanDate);
+// console.log(`You have lived ${dayspassed} days , say Alhamdulilah`); 
+
+
+
+// 10. Write a program that displays in your browser the
+// seconds that elapsed between the reference date and the
+// beginning of 2015.
+
+// const currentDate = new Date();
+
+// const Date2015 = new Date(2015,0,1);
+
+// const difference = currentDate.getTime() - Date2015.getTime();
+
+// const secondspassed = Math.floor(difference / (1000  ));
+
+// console.log(secondspassed)
+// document.write("On reference date: " + currentDate + "<br>");
+// document.write(secondspassed + " seconds had elapsed since the beginning of 2015.");
+
+// 11. Create a Date object for the current date and time.
+// Extract the hours, reset the date object an hour ahead and
+// finally display the date object in your browser.
+
+// const date = new Date();
+
+// console.log(`Original Date: ${date}`);
+
+// const currentHour = date.getHours();
+
+// date.setHours(currentHour + 1);
+
+// console.log(`Updated Date (1 hour ahead): ${date}`);
+
+
+// 12. Write a program that creates a date object and show the
+// date in an alert box that is reset to 100 years back?
+
+// const date = new Date();
+// const currentYear= date.getFullYear();
+// date.setFullYear(currentYear-100);
+// console.log(`100 year back: ${date}`)
+
+// 13. Write a program to ask the user about his age. Calculate
+// and show his birth year in your browser.
+
+// const userAge = Number(prompt("Enter your Age: ")); 
+// const currentYear = new Date().getFullYear(); 
+// const birthYear = currentYear - userAge; 
+// document.write(`<h1>Birth Year: ${birthYear}</h1>`);
+
+
+// 14. Write a program to generate your K-Electric bill in your
+// browser. All the amounts should be rounded off to 2
+// decimal places. Display the following fields:
+
+// a. Customer Name
+// b. Current Month
+// c. Number of units
+// d. Charges per unit
+// e. Net Amount Payable (within Due Date)
+// f. Late Payment Surcharge
+// g. Gross Amount Payable (after Due Date)
+// Where,
+
+// Net Amount Payable (within Due Date) = Number of units * Charges per unit
+// & Gross Amount Payable (after Due Date) = Net Amount + Late Payment Surcharge
+// 1. Static Elements
+// 1. Static Elements
+
+
+// const getdiv = document.getElementById("output");
+
+// const months = [
+//     "January", "February", "March", "April", "May", "June",
+//     "July", "August", "September", "October", "November", "December"
+// ];
+
+// const date = new Date();
+// const getMonth = date.getMonth();
+// const Month = months[getMonth];
+// document.getElementById("month").value = `Month : ${Month}`;
+
+// const chargePerunit = 45;
+// document.getElementById("price").value = `Unit Price : ${chargePerunit}`;
+
+// const lateCharges = 350;
+
+
+// const fixedDueDay = 11;
+// const formattedDueDate = `${fixedDueDay} ${Month} ${date.getFullYear()}`;
+
+
+
+
+// document.getElementById("submit").addEventListener('click', (e) => {
+   
+//     e.preventDefault(); 
+
+//     let userName = document.getElementById("usr_name");
+//     let valueName = userName.value.trim();
+
+//     let unitConsumed = document.getElementById("units");
+//     let unitValue = Number(unitConsumed.value); 
+
+//     const NetAmount = unitValue * chargePerunit;
+//     const GrossAmount = lateCharges + NetAmount;
+
+//     if (valueName === "" || unitValue === "") {
+//         alert("Please enter both the Customer Name and Number of Units before submitting!");
+//         return; 
+//     }
+//     else{
+//          getdiv.innerHTML += `
+//     <div id="Bill" style="border: 2px solid #000; padding: 15px; margin-top: 15px;">
+//         <h1>K-Electric Bill</h1>
+//         <p>Customer Name : <b>${valueName.toUpperCase()}</b></p>
+//         <p>Month : <b>${Month}</b></p>
+//         <p>Number of Units : <b>${unitValue}</b></p>
+//         <p>Charges Per Unit : <b>Rs/- ${chargePerunit}</b></p>
+//         <br>
+//         <p>Net Amount Payable (Within Due Date): <b>Rs/- ${NetAmount}</b></p>
+//         <p id="red">Late Payment Charges : <b>Rs/- ${lateCharges}</b></p>
+//         <p  id="red">Gross Payment Payable (After Due Date) : <b>Rs/- ${GrossAmount}</b></p>
+//         <br>
+//         <h3>Due Date : ${formattedDueDate}</h3>
+//     </div>`;
+//     }
+// });
 
