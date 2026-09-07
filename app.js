@@ -1910,3 +1910,96 @@
 //     }
 // });
 
+
+//                                                               CHAPTER 35-38
+
+// 1. Write a function that displays current date & time in your
+// browser.
+
+// function time(){
+//     const date= new Date();
+//     console.log(date)
+// }
+
+// time()
+
+
+// 2. Write a function that takes first & last name and then it
+// greets the user using his full name.
+
+// var firstName= prompt("Enter your first Name : ").toUpperCase();
+// var lastName = prompt("Enter your last Name : ").toUpperCase();
+
+// function greetUser(){
+
+//     alert(`HELLO, ${firstName} ${lastName}`)
+
+// }
+// greetUser()
+
+
+// 3. Write a function that adds two numbers (input by user)
+// and returns the sum of two numbers.
+
+
+// var num1=Number(prompt("Enter Num1 : "));
+// var num2=Number(prompt("Enter Num2 : "));
+
+// function Sumfunction(){
+
+//     let sum= num1+num2
+//     console.log(sum)
+
+// }
+// Sumfunction()
+
+// 4. Calculator:
+// Write a function that takes three arguments num1, num2
+// & operator & compute the desired operation. Return and
+// show the desired result in your browser.
+
+
+// let num1= Number(prompt("Enter num1 : "));
+// let num2=Number(prompt("Enter num2 : "));
+// let operator =prompt("Enter Operation (+,-,*,/) ");
+
+// function calculation(){
+     
+//     if (operator=='+'){
+//         let sum = num1+num2
+//         console.log(`The Addition of the Numbers is ${sum}`)
+//     }
+//     else if (operator == '*'){
+//          let mul = num1*num2
+//          console.log(`The Multiplication of the Numbers is ${mul}`)
+//     }
+//     else if (operator == '/'){
+//         let div = num1/num2
+//         console.log(`The Subtration of the Numbers is ${div}`)
+//     }
+//     else if (operator=='-'){
+//         let sub = num1-num2
+//         console.log(`The Subtration of the Numbers is ${sub}`)
+//     }
+    
+//     else{
+//         console.log("INVALID INPUT!")
+//     }
+// }
+
+// calculation()
+
+// 5. Write a function that squares its argument.
+
+// let num=Number(prompt("Enter Number : "));
+// function square(num) {
+    
+//     console.log(num * num)
+// }
+// square(num)
+
+// 6. Write a function that computes factorial of a number.
+
+// let num = Number(prompt("Enter Number for it's factorial : "));
+
+
