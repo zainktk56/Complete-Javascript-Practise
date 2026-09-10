@@ -1876,7 +1876,7 @@
 
 
 // document.getElementById("submit").addEventListener('click', (e) => {
-   
+
 //     e.preventDefault(); 
 
 //     let userName = document.getElementById("usr_name");
@@ -1964,7 +1964,7 @@
 // let operator =prompt("Enter Operation (+,-,*,/) ");
 
 // function calculation(){
-     
+
 //     if (operator=='+'){
 //         let sum = num1+num2
 //         console.log(`The Addition of the Numbers is ${sum}`)
@@ -1981,7 +1981,7 @@
 //         let sub = num1-num2
 //         console.log(`The Subtration of the Numbers is ${sub}`)
 //     }
-    
+
 //     else{
 //         console.log("INVALID INPUT!")
 //     }
@@ -1993,7 +1993,7 @@
 
 // let num=Number(prompt("Enter Number : "));
 // function square(num) {
-    
+
 //     console.log(num * num)
 // }
 // square(num)
@@ -2001,5 +2001,124 @@
 // 6. Write a function that computes factorial of a number.
 
 // let num = Number(prompt("Enter Number for it's factorial : "));
+// function factorial(num) {
+//     if (num==1 || num==0){
+//         return 1
+//     } 
+//     else{
+//         return num * factorial(num-1);
+//     }
+
+// }
+// console.log(factorial(num))
+
+
+// 7. Write a function that take start and end number as inputs
+// & display counting in your browser.
+
+// let num1 = Number(prompt("Enter Starting Num : ")); 
+// let num2 = Number(prompt("Enter Ending Num : ")); 
+
+// function Counting(num1, num2) { 
+//     for (let i = num1; i < num2 + 1; i++) { 
+//         console.log(i); 
+//     } 
+// } 
+// Counting(num1, num2); 
+
+// 8. Write a nested function that computes hypotenuse of a
+// right angle triangle.
+// Hypotenuse2 = Base2 + Perpendicular2
+// function | JAVASCRIPT
+// Page 2 of 4
+// Take base and perpendicular as inputs.
+// Outer function : calculateHypotenuse()
+// Inner function: calculateSquare()
+
+// let base= 40;
+// let perpendicular=30;
+
+// function hypotenous(base,perpendicular){
+//     let Squarebase=base*base;
+//     let SquarePerpendcular=perpendicular*perpendicular;
+//     let sum = SquarePerpendcular+Squarebase
+//     function squarert(sum){
+//         console.log(`The Hypoteneous is : ${Math.sqrt(sum)}`)
+//     }
+//     squarert(sum)
+// }
+
+// hypotenous(base,perpendicular)
+
+// 9. Write a function that calculates the area of a rectangle.
+//  A = width * height
+//  Pass width and height in following manner:
+// i. Arguments as value
+// ii. Arguments as variables
+
+
+// i).
+
+// let w=23;
+// let h=45;
+
+// function AreaofRectangle(w,h){
+//     let area= w*h
+//     console.log(area)
+// }
+
+// AreaofRectangle(34,45)
+
+// ii.)
+
+
+// let w = Number(prompt("Enter widht : "));
+// let h = Number(prompt("Enter height : "));
+//  function AreaofRectangle(w,h){
+//     let area= w*h
+//     console.log(area)
+//  }
+
+//  AreaofRectangle(w,h)
+
+
+// 10. Write a JavaScript function that checks whether a passed
+// string is palindrome or not?
+// A palindrome is word, phrase, or sequence that reads the same backward as
+// forward, e.g., madam.
+
+// let word = prompt("Enter a word : ");
+// let splitedWord = word.split(""); 
+// let reverse = splitedWord.toReversed();
+// let join = reverse.join(""); 
+// if (word === join) {
+//     console.log(`This word is a Palindrome`);
+// } else {
+//     console.log(`It is not a palindrome . `);
+// }
+
+// 11. Write a JavaScript function that accepts a string as a
+// parameter and converts the first letter of each word of the
+// string in upper case.
+// EXAMPLE STRING : 'the quick brown fox'
+// EXPECTED OUTPUT : 'The Quick Brown Fox'
+
+// function uppercaseWords(string) {
+//     var words = string.split(" ");
+//     for (var i = 0; i < words.length; i++) {
+//         var wordSplited = words[i].split("");
+//         wordSplited[0] = wordSplited[0].toUpperCase();
+
+//         words[i] = wordSplited.join("");
+//     }
+//     console.log(words.join(" "));
+// }
+// uppercaseWords('the quick brown fox');
+
+
+// 12. Write a JavaScript function that accepts a string as a
+// parameter and find the longest word within the string.
+// EXAMPLE STRING : 'Web Development Tutorial'
+// EXPECTED OUTPUT : 'Development'
 
 
