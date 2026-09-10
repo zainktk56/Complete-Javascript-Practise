@@ -2122,3 +2122,77 @@
 // EXPECTED OUTPUT : 'Development'
 
 
+// function findLongestWord(str) {
+//   const words = str.split(' ');
+  
+//   let longestWord = '';
+  
+//   for (let word of words) {
+//     if (word.length > longestWord.length) {
+//       longestWord = word; 
+//     }
+//   }
+  
+//   return longestWord;
+// }
+
+// console.log(findLongestWord('Web Development Tutorial')); 
+
+// 13. Write a JavaScript function that accepts two arguments, a
+// string and a letter and the function will count the number of
+// function | JAVASCRIPT
+// Page 3 of 4
+// occurrences of the specified letter within the string.
+// Sample arguments : 'JSResourceS.com', 'o'
+
+// function countLetter(str, letter) {
+//   // Step 1: Initialize a counter variable to keep track of matches
+//   let count = 0;
+  
+//   // Step 2: Loop through each character in the string
+//   for (let char of str) {
+//     // Step 3: Check if the current character matches the target letter
+//     if (char === letter) {
+//       count++; // Increment counter if there is a match
+//     }
+//   }
+  
+//   // Step 4: Return the total count
+//   return count;
+// }
+
+// // Example Usage:
+// console.log(countLetter('JSResourceS.com', 'o')); 
+// // Output: 2
+
+
+// 14. The Geometrizer
+// Create 2 functions that calculate properties of a circle, using
+// the definitions here.
+// Create a function called calcCircumference:
+// • Pass the radius to the function.
+// • Calculate the circumference based on the radius, and output
+// "The circumference is NN".
+// Create a function called calcArea:
+// • Pass the radius to the function.
+// • Calculate the area based on the radius, and output "The area
+// is NN".
+// Circumference of circle = 2πr
+// Area of circle = πr2
+
+// let num = Number(prompt('ENTER NUM  : '))
+// function calcCircumference(num){
+//     let circumference= 2*3.142*num
+    
+//     console.log(`The Circumference of Circle is : ${circumference.toFixed(3)}`);
+// }
+
+
+// function AreaOfCircle(num){
+//     let area = 3.142 * (num*num)
+
+//     console.log(`The Area of Circle is : ${area.toFixed(3)}`)
+// }
+
+// calcCircumference(num)
+// AreaOfCircle(num)
