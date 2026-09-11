@@ -2124,15 +2124,15 @@
 
 // function findLongestWord(str) {
 //   const words = str.split(' ');
-  
+
 //   let longestWord = '';
-  
+
 //   for (let word of words) {
 //     if (word.length > longestWord.length) {
 //       longestWord = word; 
 //     }
 //   }
-  
+
 //   return longestWord;
 // }
 
@@ -2148,7 +2148,7 @@
 // function countLetter(str, letter) {
 //   // Step 1: Initialize a counter variable to keep track of matches
 //   let count = 0;
-  
+
 //   // Step 2: Loop through each character in the string
 //   for (let char of str) {
 //     // Step 3: Check if the current character matches the target letter
@@ -2156,7 +2156,7 @@
 //       count++; // Increment counter if there is a match
 //     }
 //   }
-  
+
 //   // Step 4: Return the total count
 //   return count;
 // }
@@ -2183,7 +2183,7 @@
 // let num = Number(prompt('ENTER NUM  : '))
 // function calcCircumference(num){
 //     let circumference= 2*3.142*num
-    
+
 //     console.log(`The Circumference of Circle is : ${circumference.toFixed(3)}`);
 // }
 
@@ -2196,3 +2196,101 @@
 
 // calcCircumference(num)
 // AreaOfCircle(num)
+
+// ---------------------------------------------------------CHAPTER 38-42-------------------------------------------------------//
+
+
+// 1. Write a custom function power ( a, b ), to calculate the value of
+// a raised to b.
+
+// let num = Number(prompt("Enter a number : "));
+// let power= Number(prompt("Enter the power : "));
+
+// const customPower=(num,power)=>{
+//     let answer = Math.pow(num,power)
+//     console.log(`The Value of ${num} raised to ${power} is : ${answer}`)
+// }
+// customPower(num,power)
+
+
+// 2. Any year is entered through the keyboard. Write a function to
+// determine whether the year is a leap year or not.
+
+// let year=Number(prompt("Enter a Year : "));
+// const leapyear=(year)=>{
+// if (year%2==0){
+//     console.log(`The Year ${year}is leap year . `)
+// }
+// else{
+//     console.log(`The Year ${year} is not a leap year.`)
+// }
+// }
+// leapyear(year)
+
+// 3. If the lengths of the sides of a triangle are denoted by a, b, and
+// c, then area of triangle is given by
+// area = S(S − a)(S − b)(S − c)
+// where, S = ( a + b + c ) / 2
+// Calculate area of triangle using 2 functions.
+
+// let a = 45;
+// let b = 67;
+// let c = 78;
+
+// const findingS = (a, b, c) => {
+
+//     let S = ((a + b + c) / 2)
+
+//     const Findingarea = (S) => {
+//         let area= S*(S-a)*(S-b)*(S-c)
+//         console.log(`The area of the triangle is : ${area}`)
+//     }
+//     Findingarea(S)
+// }
+
+// findingS(a,b,c)
+
+// Alternative 
+
+// function  findingS(a, b, c){
+//     let S = ((a + b + c) / 2)
+
+//     function Findingarea(S){
+//         let area= S(S-a)(S-b)(S-c)
+//         console.log(`The area of the triangle is : ${area}`)
+//     }
+//     Findingarea(S)
+// }
+// findingS(a,b,c)
+
+// 4. Write a function that receives marks received by a student in 3
+// subjects and returns the average and percentage of these
+// marks. there should be 3 functions one is the mainFunction
+// and other are for average and percentage. Call those functions
+// from mainFunction and display result in mainFunction.
+
+
+// let mark1 = 90;
+// let mark2 = 45;
+// let mark3 = 89;
+
+// function mainFunction(m1, m2, m3) {
+//     let avg = calculateAverage(m1, m2, m3);
+    
+//     let totalMarks = m1 + m2 + m3;
+//     let pct = calculatePercentage(totalMarks, 300);
+
+//     console.log(`The Average Marks are : ${avg.toFixed(2)}`);
+//     console.log(`The Percentage is : ${pct.toFixed(2)}%`);
+// }
+
+// function calculateAverage(m1, m2, m3) {
+//     return (m1 + m2 + m3) / 3;
+// }
+
+// function calculatePercentage(obtained, total) {
+//     return (obtained / total) * 100;
+// }
+
+// mainFunction(mark1, mark2, mark3);
+
