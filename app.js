@@ -2294,3 +2294,18 @@
 
 // mainFunction(mark1, mark2, mark3);
 
+
+// var sentence='hello sir how are u';
+
+// for (let i = 0; i < sentence.length; i++) {
+    
+//     let element1 = sentence.includes('a');
+//     let element2 = sentence.includes('e');
+//     let element3 = sentence.includes('i');
+//     let element4 = sentence.includes('o');
+//     let element5 = sentence.includes('u');
+
+   
+    
+// }
+
