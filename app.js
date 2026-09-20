@@ -2295,17 +2295,43 @@
 // mainFunction(mark1, mark2, mark3);
 
 
-// var sentence='hello sir how are u';
+// 5. You have learned the function indexOf. Code your own custom
+// function that will perform the same functionality. You can code
+// for single character as of now.
 
-// for (let i = 0; i < sentence.length; i++) {
-    
-//     let element1 = sentence.includes('a');
-//     let element2 = sentence.includes('e');
-//     let element3 = sentence.includes('i');
-//     let element4 = sentence.includes('o');
-//     let element5 = sentence.includes('u');
 
-   
+// let a = prompt('Enter a sentence : ');
+// let b=prompt('Enter the word you want to find index : ');
+// // console.log(a.indexOf('e'))
+
+// for (let i = 0; i < a.length; i++) {
+//     if (b==a[i]){
+//         console.log(i)
+//     }
     
 // }
 
+// 6. Write a function to delete all vowels from a sentence. Assume
+// that the sentence is not more than 25 characters long.
+
+// function removeVowels(sentence) {
+//     let result = "";
+    
+//     for (let i = 0; i < sentence.length; i++) {
+//         let char = sentence[i].toLowerCase();
+        
+//         if (
+//             char !== "a" &&
+//             char !== "e" &&
+//             char !== "i" &&
+//             char !== "o" &&
+//             char !== "u"
+//         ) {
+//             result += sentence[i];
+//         }
+//     }
+    
+//     return result;
+// }
+
+// console.log(removeVowels("JavaScript is easy"));
